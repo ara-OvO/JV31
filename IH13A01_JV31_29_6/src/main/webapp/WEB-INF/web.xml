@@ -1,0 +1,31 @@
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <!-- ShainMaintenanceサーブレット【servlet-nameをmappingと合わせる】 -->
+    <servlet>
+        <servlet-name>ShainDB</servlet-name>
+        <servlet-class>servlet.ShainMaintenance</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShainDB</servlet-name>
+        <url-pattern>/maintenance</url-pattern>
+    </servlet-mapping>
+
+    <!--
+     【http://localhost:8080/IH13AXX_JV31_29_05/】でアクセスされた際に
+     【http://localhost:8080/IH13AXX_JV31_29_05/maintenance】にリダイレクト
+      -->
+    <servlet>
+        <servlet-name>RootRedirectServlet</servlet-name>
+        <servlet-class>servlet.RootRedirectServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RootRedirectServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>
