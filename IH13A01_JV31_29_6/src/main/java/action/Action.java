@@ -29,7 +29,6 @@ public class Action {
     	String gender = request.getParameter("gender");
     	String note = request.getParameter("note");
     	String sortOrder = request.getParameter("sortOrder");
-    	System.out.println("s"+sortOrder);
     	
     	ShainSearch shainSearch = new ShainSearch();
     	

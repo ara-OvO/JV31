@@ -17,7 +17,7 @@ import jakarta.persistence.criteria.Root;
  */
 public class ShainDAO {
 
-    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("IH13A01_JV31_29_06_PU");
+    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("IH13A01_JV31_07_PU");
 
     /**
      * 全件検索
