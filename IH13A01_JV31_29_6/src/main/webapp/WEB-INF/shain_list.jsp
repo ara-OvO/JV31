@@ -42,13 +42,21 @@
     <p>データが登録されていません</p>
 <% } else { %>
     <table border="1">
-    <tr><th>ID</th><th>氏名</th><th>性別</th><th>備考</th></tr>
+    <tr><th>ID</th><th>氏名</th><th>性別</th><th>備考</th><th>操作</th></tr>
     <% for (Shain s : list) { %>
+    <%
+        String editUrl = request.getContextPath() + "/maintenance?action=edit&id=" + s.getId();
+        String delUrl  = request.getContextPath() + "/maintenance?action=delete&id=" + s.getId();
+    %>
     <tr>
         <td><%= s.getId() %></td>
         <td><%= s.getName() %></td>
         <td><%= s.getGenderLabel() %></td>
         <td><%= s.getNote() %></td>
+        <td>
+            <a href="<%= editUrl %>">編集</a> |
+            <a href="<%= delUrl %>">削除</a>
+        </td>
     </tr>
     <% } %>
     </table>

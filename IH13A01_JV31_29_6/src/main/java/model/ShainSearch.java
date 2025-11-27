@@ -45,7 +45,7 @@ public class ShainSearch{
 	  }
 	  
 	  /**
-	   * @return gender
+	   * @return note
 	   */
 	  public String getNote() {
 	      return note;
